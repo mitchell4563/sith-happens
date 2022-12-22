@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS user_db;
+CREATE DATABASE user_db;
+
+
 /*Create database*/
 CREATE DATABASE star_wars;
 \connect star_wars;
