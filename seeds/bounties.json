@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Darth Vader",
+      "reward": 250,
+      "location": "somewhere idk"
+    },
+    {
+      "name": "Mitch",
+      "reward": 100000,
+      "location": "you never know"
+    },
+    {
+      "name": "Chris",
+      "reward": 275,
+      "location": "probably somewhere"
+    }
+  ]
