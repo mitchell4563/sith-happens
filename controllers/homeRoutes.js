@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Bounty } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -9,11 +9,13 @@ router.get('/', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
     });
-
-    const users = userData.map((project) => project.get({ plain: true }));
+    const bountyData = await Bounty.findAll({
+      attributes: this.all
+    })
+    const bounties = bountyData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      users,
+      bounties,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
     });
