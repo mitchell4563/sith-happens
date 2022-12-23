@@ -13,10 +13,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Bounty.bulkCreate(bounties, {
-    individualHooks: true,
-    returning: true,
-  });
+  await Bounty.bulkCreate(bounties);
 
   process.exit(0);
 };

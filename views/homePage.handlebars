@@ -1,9 +1,9 @@
 <h2> Home Page </h2>
 <h3> Bounties </h3>
-{{#each Bounty as |Bounty| }}
+{{#each bounties as |bounty|}}
 <div>
-    <h3>Name: {{ Bounty.name }}</h3>
-    <h3>Reward: {{ Bounty.reward }}</h3>
-    <h3>Last Known location: {{ Bounty.location }} </h3>
+    <h3>Name: {{ bounty.name }}</h3>
+    <h3>Reward: {{ bounty.reward }}</h3>
+    <h3>Last Known location: {{ bounty.location }} </h3>
 </div>
 {{/each}}

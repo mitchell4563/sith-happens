@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Bounty extends Model {
-  
+  return
 }
 
 Bounty.init(
