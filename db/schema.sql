@@ -1,1 +1,3 @@
-DROP DATABASE IF EXISTS user_db;
+DROP DATABASE IF EXISTS sith_db;
+CREATE DATABASE sith_db;
+USE sith_db
