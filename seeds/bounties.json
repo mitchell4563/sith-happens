@@ -1,17 +1,38 @@
 [
     {
-      "name": "Darth Vader",
+      "name": "Garindan Ezz Zavor",
       "reward": 250000,
-      "location": "somewhere idk"
+      "location": "Kubindi",
+      "picture": "../../public/images/garindan.jpg"
     },
     {
       "name": "Han Solo",
       "reward": 100000,
-      "location": "Tatooine"
+      "location": "Tatooine",
+      "picture": "../../public/images/han_solo.jpg"
     },
     {
-      "name": "Lando",
+      "name": "Lando Calrissian",
       "reward": 100000,
-      "location": "Bespin"
+      "location": "Bespin",
+      "picture": "../../public/images/lando.jpg"
+    },
+    {
+      "name": "Bossk",
+      "reward": 100000,
+      "location": "Transdosha",
+      "picture": "../../public/images/Bossk.jpeg"
+    },
+    {
+      "name": "Jar-Jar Binks",
+      "reward": 100000,
+      "location": "Naboo",
+      "picture": "../../public/images/jarjar.jpg"
+    },
+    {
+      "name": "Salacious B. Crumb",
+      "reward": 10000000,
+      "location": "Bespin",
+      "picture": "../../public/images/crumb.jpg"
     }
   ]
