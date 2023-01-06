@@ -1,17 +1,17 @@
 [
     {
       "name": "Darth Vader",
-      "reward": 250,
+      "reward": 250000,
       "location": "somewhere idk"
     },
     {
-      "name": "Mitch",
+      "name": "Han Solo",
       "reward": 100000,
-      "location": "you never know"
+      "location": "Tatooine"
     },
     {
-      "name": "Chris",
-      "reward": 275,
-      "location": "probably somewhere"
+      "name": "Lando",
+      "reward": 100000,
+      "location": "Bespin"
     }
   ]
