@@ -1,38 +1,44 @@
 [
     {
       "name": "Garindan Ezz Zavor",
+      "description": "With his face hidden beneath his dark hood, goggles and insect-eating snout, few know Garindan's origins. He was seen carrying the Model 434 blaster pistol, popular among bounty hunters and mercenaries.",
       "reward": 250000,
       "location": "Kubindi",
-      "picture": "garindan.jpg"
+      "picture": "garindan_concept.jpeg"
     },
     {
       "name": "Han Solo",
+      "description": "Han Solo, known only as Han until being given the surname Solo by an Imperial recruitment officer, and formerly known as Cadet 124-329 while serving as an Imperial cadet, is a human male smuggler.",
       "reward": 100000,
       "location": "Tatooine",
-      "picture": "han_solo.jpg"
+      "picture": "han_concept.jpeg"
     },
     {
-      "name": "Lando Calrissian",
+      "name": "Zam Wesell",
+      "description": "Zam Wesell is a rogue Clawdite female bounty hunter. She possess the ability to physically alter her appearance—a power which she used to assume the visage of a human female.",
       "reward": 100000,
       "location": "Bespin",
-      "picture": "lando.jpg"
+      "picture": "zam_concept.jpeg"
     },
     {
       "name": "Bossk",
+      "description": "Bossk'wassak'Cradossk, known more commonly as Bossk, is a male Trandoshan known for hunting Wookiees. While Bossk often wields a mortar gun, he is also skilled in unarmed combat.",
       "reward": 100000,
       "location": "Transdosha",
-      "picture": "Bossk.jpeg"
+      "picture": "bossk_concept.jpeg"
     },
     {
-      "name": "Jar-Jar Binks",
+      "name": "The Child",
+      "description": "Grogu was is male Force-sensitive Mandalorian. Don't let his appearance fool you. Grogu is able to harness the mystical energies of the Force on account of being Force-sensitive.",
       "reward": 100000,
-      "location": "Naboo",
-      "picture": "jarjar.jpg"
+      "location": "Unknown",
+      "picture": "grogu_concept.jpg"
     },
     {
       "name": "Salacious B. Crumb",
+      "description": "Salacious B. Crumb is a Kowakian monkey-lizard who works as a jester in the court of the crime lord Jabba Desilijic Tiure. According to the mole-flea Lugubrious Mote, Salacious is 'dumber than a newborn rancor.'",
       "reward": 10000000,
       "location": "Bespin",
-      "picture": "crumb.jpg"
+      "picture": "crumb_concept.jpeg"
     }
   ]

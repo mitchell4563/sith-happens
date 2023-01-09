@@ -1,4 +1,52 @@
-.picture {
-    height: 30vh;
-    width: 30vw;
+* {
+    font-family: 'Jost', sans-serif;
+}
+
+#title {
+    font-family: 'Star Wars', sans-serif; 
+    color: yellow;                                        
+}
+
+:root {
+    --jumbotron-padding-y: 3rem;
+  }
+
+#jumbotron {
+    padding-top: var(--jumbotron-padding-y);
+    padding-bottom: var(--jumbotron-padding-y);
+    margin-bottom: 0;
+    background-color: #fff;
+    object-fit: fill;
+}
+  
+  @media (min-width: 768px) {
+    #jumbotron {
+      padding-top: calc(var(--jumbotron-padding-y) * 2);
+      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
+  }
+  
+  #jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  #jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  #jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  .card:hover {
+    border: 2px solid yellow;
+    cursor: pointer;
+
+}
+
+.card .mask:hover {
+    background-color: hsla(0, 0%, 0%, 0.0)
 }

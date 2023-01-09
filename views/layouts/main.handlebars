@@ -5,41 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Bounty Hunter Guild</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <title>Bounty Hunters' Guild</title>
+  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  {{!-- Custom Font --}}
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
   <link type="text/css" rel="stylesheet" href="/css/styles.css ">
-
 </head>
-
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
-         {{!-- navbar --}}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Available</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Claimed</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Profile</a>
-  </li>
-  <button class="btn" id="logout">Terminate Session</button>
-</ul>
-    {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-
-  <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow navbar-expand-md">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Bounty Hunters' Guild</strong>
+          </a>
+          <button class="btn" id="logout">Terminate Session</button>
+        </div>
+      </div>
+    </header>
 
+    {{!-- main --}}
+    <main role="main">
+
+      {{!-- Jumbotron --}}
+      <div id="jumbotron" class="bg-image text-center shadow-1-strong rounded text-white img-fluid" style="background-image: url('https://images.hdqwalls.com/download/cyberpunk-city-paint-art-4k-4o-1366x768.jpg'); height: auto; max-width: 100% ">
+      <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6); padding: 10vh;">
+          <h1 id="title" class="mb-3 h1"></h1>
+          <p class="lead text-white">In keeping with the loosely defined hunter code of ethics,
+                                   killing is sometimes necessary. <br>
+                                   That's business, pure and simple. However, unnecessary killing is still murder. <br>
+                                   The hunter, unless otherwise directed by those leveling the bounty, <br>
+                                   must <em>attempt</em> to deliver the acquisition alive.</p>
+        </div>
+      </div>
+    {{/if}}
+  
+        
+        
+
+    <div class="bg-image" style="background-image: url('https://i.pinimg.com/originals/4a/a9/9b/4aa99b6ad2d2cbc7cb04a41571885a8f.jpg'); height: 100vh; max-width: 100% ">
+      <div class="album py-5">
+        <div class="container">
+          <div class="row">
+              {{{ body }}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    
+    
+
+
+  
+
+    {{!-- <!-- Only include the logout script if the user is logged in --> --}}
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      new TypeIt("#title", {
+        strings: "Welcome to the Bounty Hunters' Guild.",
+      }).go();
+    </script>
+    {{/if}}
+    
+          
+        
+</body>
 </html>
