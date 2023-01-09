@@ -6,40 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Bounty Hunter Guild</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="/css/styles.css ">
 
 </head>
 
+
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
-         {{!-- navbar --}}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Available</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Claimed</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Profile</a>
-  </li>
-  <button class="btn" id="logout">Terminate Session</button>
-</ul>
+  {{#if logged_in}}
+  <div id="intro" class="d-flex bg-image justify-content-center">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+        <div class="container">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block p-5 f">
+            <div class="container-fluid">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">CLAIMED</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="logout">Terminate Session</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center text-warning">
+          <h1>Choose your Target.</h1>
+        </div>
+
+        {{!-- Main --}}
+        <div class="d-flex container d-print-inline-block">
+          <div class="row justify-content-around">
+              {{{ body }}}
+          </div>
+        </div>
+
+    </div>
+  </div>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+  
+  
+     
 
   <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+          
+        
 </body>
-
 </html>

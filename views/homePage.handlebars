@@ -1,7 +1,8 @@
-<h2> Home Page </h2>
-<h3> Bounties </h3>
 {{#each bounties as |bounty|}}
-<div>
+<div class="card bg-dark text-white">
   <img class='picture' src="/images/{{picture}}">
+  <div class="d-flex card-img-overlay align-items-center justify-content-center">
+    <h2 class="card-title">{{bounty.name}}</h2>
+  </div>
 </div>
 {{/each}}
