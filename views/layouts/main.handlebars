@@ -20,18 +20,16 @@
 </head>
 <body>
   {{#if logged_in}}
-    {{!-- <header>
+    <header>
       <div class="navbar navbar-dark bg-dark box-shadow navbar-expand-md">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <strong>Bounty Hunters' Guild</strong>
           </a>
-          <a>
-
-          </a>
+          <button class="btn" id="logout">Terminate Session</button>
         </div>
       </div>
-    </header> --}}
+    </header>
 
     {{!-- main --}}
     <main role="main">
@@ -39,7 +37,7 @@
       {{!-- Jumbotron --}}
       <div id="jumbotron" class="bg-image text-center shadow-1-strong rounded text-white img-fluid" style="background-image: url('https://images.hdqwalls.com/download/cyberpunk-city-paint-art-4k-4o-1366x768.jpg'); height: auto; max-width: 100% ">
       <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6); padding: 10vh;">
-          <h1 id="title" class="mb-3 h1">Welcome to the Bounty Hunters' Guild.</h1>
+          <h1 id="title" class="mb-3 h1"></h1>
           <p class="lead text-white">In keeping with the loosely defined hunter code of ethics,
                                    killing is sometimes necessary. <br>
                                    That's business, pure and simple. However, unnecessary killing is still murder. <br>
@@ -47,7 +45,7 @@
                                    must <em>attempt</em> to deliver the acquisition alive.</p>
         </div>
       </div>
-        
+    {{/if}}
   
         
         
@@ -62,21 +60,23 @@
       </div>
     </div>
   </main>
+    
+    
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script> --}}
-    {{/if}}
 
-    <!-- Only include the logout script if the user is logged in -->
+  
+
+    {{!-- <!-- Only include the logout script if the user is logged in --> --}}
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      new TypeIt("#title", {
+        strings: "Welcome to the Bounty Hunters' Guild.",
+      }).go();
+    </script>
     {{/if}}
+    
           
         
 </body>
