@@ -17,6 +17,10 @@ Bounty.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     reward: {
       type: DataTypes.INTEGER,
       allowNull: false,

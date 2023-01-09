@@ -1,77 +1,52 @@
-nav {
-    font-family: 'Jost', sans-serif;;
+* {
+    font-family: 'Jost', sans-serif;
 }
 
-body {
-    font-family: 'Star Wars', sans-serif;
+#title {
+    font-family: 'Star Wars', sans-serif; 
+    color: yellow;                                        
 }
 
-#intro {
-    background-image: url("../images/cantina-background-2.jpeg");
-    height: 100vh;
-    width: 100%;
+:root {
+    --jumbotron-padding-y: 3rem;
   }
 
-
-.card {
-    border: 1px solid white;
-    margin: 5px;
-
+#jumbotron {
+    padding-top: var(--jumbotron-padding-y);
+    padding-bottom: var(--jumbotron-padding-y);
+    margin-bottom: 0;
+    background-color: #fff;
+    object-fit: fill;
 }
-
-.card:hover {
-    border: 1.5px solid yellow;
-    color: yellow;
-}
-
-.picture {
-    height: 30vh;
-    width: 30vh;
-    display: block;
-    
-}
-
-.card-title {
-    opacity: 0;
-}
-
-.card-img-overlay:hover .card-title {
-    opacity: 1;
-    color: yellow;
-}
-
-
-
-.card-img-overlay:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.navbar {
-    margin-left: 1vw;
-}
-
-.navbar .nav-link {
-    color: #fff !important;
-    font-size: 20px;
+  
+  @media (min-width: 768px) {
+    #jumbotron {
+      padding-top: calc(var(--jumbotron-padding-y) * 2);
+      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
   }
+  
+  #jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  #jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  #jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
-.nav-item {
-    border-right: 2px white solid;
-    border-left: 2px white solid;
-    padding: 5px 25px;
+  .card:hover {
+    border: 2px solid yellow;
+    cursor: pointer;
+
 }
 
-.nav-item:hover {
-    background-color: rgba(255,255,255,0.1);
-    border-right: 2px yellow solid;
-    border-left: 2px yellow solid;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: yellow;
-}
-
-.nav-link {
-    padding: 5px 10px;
+.card .mask:hover {
+    background-color: hsla(0, 0%, 0%, 0.0)
 }
