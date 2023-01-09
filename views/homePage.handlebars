@@ -8,13 +8,15 @@
                   <p class="card-text text-white">{{bounty.description}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-danger">ELIMINATE</button>
+                      <button id="kill" class="btn btn-sm btn-outline-danger delete-button" data-id="{{bounty.id}}">ELIMINATE</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 {{/each}}
+
+<script src='/js/deleteBounty.js'></script>
 
             
 

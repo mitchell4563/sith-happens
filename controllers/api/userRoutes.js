@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { response } = require('express');
-const { User } = require('../../models');
+const { User, Bounty } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -73,6 +73,25 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const bountyData = await Bounty.destroy({
+      where: {
+        id: req.params.id
+      },
+    });
+
+    if (!bountyData) {
+      res.status(404).json({ message: 'No Bounty found with this id' });
+      return;
+    }
+
+    res.status(200).json(bountyData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
