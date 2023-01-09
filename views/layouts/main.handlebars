@@ -17,25 +17,26 @@
 
   <!-- Custom styles for this template -->
   <link type="text/css" rel="stylesheet" href="/css/styles.css ">
+
+  {{!-- font awesome --}}
+  <script src="https://kit.fontawesome.com/0d398b51a5.js" crossorigin="anonymous"></script>
 </head>
 <body>
   {{#if logged_in}}
-    <header>
-      <div class="navbar navbar-dark bg-dark box-shadow navbar-expand-md">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Bounty Hunters' Guild</strong>
-          </a>
-          <button class="btn" id="logout">Terminate Session</button>
-        </div>
-      </div>
-    </header>
+    
 
     {{!-- main --}}
     <main role="main">
 
       {{!-- Jumbotron --}}
       <div id="jumbotron" class="bg-image text-center shadow-1-strong rounded text-white img-fluid" style="background-image: url('https://images.hdqwalls.com/download/cyberpunk-city-paint-art-4k-4o-1366x768.jpg'); height: auto; max-width: 100% ">
+        <header>
+          <div class="navbar bg-transparent box-shadow navbar-expand-md">
+            <div class="container d-flex justify-content-between">
+              <button class="btn" id="logout"><i class="fa-solid fa-right-to-bracket"></i></button>
+            </div>
+          </div>
+        </header>
       <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6); padding: 10vh;">
           <h1 id="title" class="mb-3 h1"></h1>
           <p class="lead text-white">In keeping with the loosely defined hunter code of ethics,
@@ -51,7 +52,12 @@
         
 
     <div class="bg-image" style="background-image: url('https://i.pinimg.com/originals/4a/a9/9b/4aa99b6ad2d2cbc7cb04a41571885a8f.jpg'); height: 100vh; max-width: 100% ">
-      <div class="album py-5">
+      <div class="col text-center" style="background-color: hsla(0, 0%, 0%, 0.6);">
+        <h1 class="text-white pt-5"><i class="fa-solid fa-layer-group"></i> 1,000</h1>
+      </div>
+
+      
+      <div class="album pt-5">
         <div class="container">
           <div class="row">
               {{{ body }}}
