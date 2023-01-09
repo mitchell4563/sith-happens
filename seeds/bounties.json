@@ -1,7 +1,7 @@
 [
     {
       "name": "Garindan Ezz Zavor",
-      "description": "With his face hidden beneath his dark hood, goggles and insect-eating snout, few on Tatooine know Garindan's origins. He was seen carrying the Model 434 blaster pistol, popular among bounty hunters and mercenaries.",
+      "description": "With his face hidden beneath his dark hood, goggles and insect-eating snout, few know Garindan's origins. He was seen carrying the Model 434 blaster pistol, popular among bounty hunters and mercenaries.",
       "reward": 250000,
       "location": "Kubindi",
       "picture": "garindan_concept.jpeg"
@@ -29,7 +29,7 @@
     },
     {
       "name": "The Child",
-      "description": "Grogu was is male Force-sensitive Mandalorian belonging to the same mysterious species as the legendary Grand Master Yoda. Don't let his appearance fool you. Grogu is able to harness the mystical energies of the Force on account of being Force-sensitive.",
+      "description": "Grogu was is male Force-sensitive Mandalorian. Don't let his appearance fool you. Grogu is able to harness the mystical energies of the Force on account of being Force-sensitive.",
       "reward": 100000,
       "location": "Unknown",
       "picture": "grogu_concept.jpg"
