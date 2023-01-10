@@ -1,19 +1,19 @@
 const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/users/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to claim bounty');
-      }
-    }
-  };
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
 
-  document
-    .querySelector('.delete-button')
-    .addEventListener('click', delButtonHandler);
+    const response = await fetch(`/api/users/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert("Failed to claim bounty");
+    }
+  }
+};
+
+document
+  .querySelector(".delete-button")
+  .addEventListener("click", delButtonHandler);

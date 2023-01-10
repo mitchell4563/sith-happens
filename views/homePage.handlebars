@@ -1,23 +1,27 @@
 {{#each bounties as |bounty|}}
-            <div class="col-md-4">
-              <div class="card mb-4 bg-dark box-shadow">
-                <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
-                  <img class="card-img-top" src="/images/{{picture}}" data-holder-rendered="true">
-                </div>
-                <div class="card-body">
-                  <p class="card-text text-white">{{bounty.description}}</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button id="kill" class="btn btn-sm btn-outline-danger delete-button" data-id="{{bounty.id}}">ELIMINATE</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="col-md-4">
+    <div class="card mb-4 bg-dark box-shadow">
+      <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
+        <img
+          class="card-img-top"
+          src="/images/{{picture}}"
+          data-holder-rendered="true"
+        />
+      </div>
+      <div class="card-body">
+        <p class="card-text text-white">{{bounty.description}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button
+              id="kill"
+              class="btn btn-sm btn-outline-danger delete-button"
+              data-id="{{bounty.id}}"
+            >ELIMINATE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {{/each}}
 
-<script src='/js/deleteBounty.js'></script>
-
-            
-
-      
+<script src="/js/deleteBounty.js"></script>

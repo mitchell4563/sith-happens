@@ -1,8 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Bounty extends Model {
-  return
+  return;
 }
 
 Bounty.init(
@@ -39,7 +39,7 @@ Bounty.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'bounty',
+    modelName: "bounty",
   }
 );
 

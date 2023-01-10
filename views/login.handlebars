@@ -1,27 +1,49 @@
-<div class="d-flex container-fluid text-center align-items-center justify-content-center h-100">
-  <div id="login-body" class="w-20 bg-transparent text-center align-items-center justify-content-center">
-  <form class="form-signin login-form">
-      {{!-- email --}}
+<div
+  class="d-flex container-fluid text-center align-items-center justify-content-center h-100"
+>
+  <div
+    id="login-body"
+    class="w-20 bg-transparent text-center align-items-center justify-content-center"
+  >
+    <form class="form-signin login-form">
+      {{! email }}
       <div class="form-group row">
-        <label for="email-login" class="text-white sr-only col-sm-2 col-form-label">Email address</label>
+        <label
+          for="email-login"
+          class="text-white sr-only col-sm-2 col-form-label"
+        >Email address</label>
         <div class="col-sm-12">
-          <input type="email" id="email-login" class="form-control" placeholder="Email address" required="" autofocus="">
+          <input
+            type="email"
+            id="email-login"
+            class="form-control"
+            placeholder="Email address"
+            required=""
+            autofocus=""
+          />
         </div>
       </div>
 
-      {{!-- password --}}
+      {{! password }}
       <div class="form-group row">
-        <label for="password-login" class="text-white sr-only col-sm-2 col-form-label">Password</label>
+        <label
+          for="password-login"
+          class="text-white sr-only col-sm-2 col-form-label"
+        >Password</label>
         <div class="col-sm-12">
-          <input type="password" id="password-login" class="form-control" placeholder="Password" required="">
+          <input
+            type="password"
+            id="password-login"
+            class="form-control"
+            placeholder="Password"
+            required=""
+          />
         </div>
       </div>
       <button class="btn btn-lg btn-warning btn-block" type="submit">Sign in</button>
       <a href="/signup" class="mt-5 mb-3 link-warning">Sign Up</a>
-  </form>
+    </form>
+  </div>
 </div>
-</div>
-
 
 <script src="/js/login.js"></script>
-

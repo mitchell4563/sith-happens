@@ -1,17 +1,17 @@
-const router = require('express').Router();
-const { response } = require('express');
-const { User, Bounty } = require('../../models');
+const router = require("express").Router();
+const { response } = require("express");
+const { User, Bounty } = require("../../models");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const userData = await User.findAll()
-    res.status(200).json(userData)
-  } catch (error){
-    res.status(500).json(error)
+    const userData = await User.findAll();
+    res.status(200).json(userData);
+  } catch (error) {
+    res.status(500).json(error);
   }
-})
+});
 //sign up information
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
       name: req.body.name,
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
@@ -56,16 +56,15 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
-      res.json({ user: userData, message: 'You are now logged in!' });
-    });
 
+      res.json({ user: userData, message: "You are now logged in!" });
+    });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
     req.session.destroy(() => {
@@ -76,16 +75,16 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const bountyData = await Bounty.destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
       },
     });
 
     if (!bountyData) {
-      res.status(404).json({ message: 'No Bounty found with this id' });
+      res.status(404).json({ message: "No Bounty found with this id" });
       return;
     }
 
