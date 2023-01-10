@@ -1,11 +1,14 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
-class Bounty extends Model {
-  return;
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
 }
 
-Bounty.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,30 +20,35 @@ Bounty.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
-    reward: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    location: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    picture: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      validate: {
+        len: [8],
+      },
     },
   },
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "bounty",
+    modelName: "user",
   }
 );
 
-module.exports = Bounty;
+module.exports = User;
