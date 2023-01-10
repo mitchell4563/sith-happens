@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
     });
     const bounties = bountyData.map((project) => project.get({ plain: true }));
 
-    res.render("homepage", {
+    res.render("homePage", {
       bounties,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
